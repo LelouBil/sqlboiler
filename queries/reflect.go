@@ -270,6 +270,7 @@ Rows:
 		case kindPtrSliceStruct:
 			ptrSlice.Set(reflect.Append(ptrSlice, newStruct))
 		}
+		oneStruct.Set(reflect.Zero(structType))
 	}
 
 	if bkind == kindStruct && !foundOne {
